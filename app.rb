@@ -41,4 +41,17 @@ get("/paper") do
 end
 
 get("/scissors") do
+  moves = ["Rock", "Paper", "Scissors"]
+
+  @comp_move = moves.sample
+
+  if @comp_move == "Scissors"
+    @outcome = "Tied"
+  elsif @comp_move == "Rock"
+    @outcome = "Lost"
+  else
+    @outcome = "Won"
+  end
+
+  erb(:scissors)
 end
