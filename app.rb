@@ -11,27 +11,15 @@ end
 get("/rock") do
   moves = ["rock", "paper", "scissors"]
 
-  comp_move = moves.sample
+  @comp_move = moves.sample
 
-  if comp_move == "rock"
-    outcome = "tied"
-  elsif comp_move == "paper"
-    outcome = "lost"
+  if @comp_move == "rock"
+    @outcome = "tied"
+  elsif @comp_move == "paper"
+    @outcome = "lost"
   else
-    outcome = "won"
+    @outcome = "won"
   end
 
-  "
-  <h2>
-    We played rock!
-  </h2>
-
-  <h2>
-    They played #{comp_move}!
-  </h2>
-
-  <h2>
-    We #{outcome}!
-  </h2>
-  "
+  erb(:rock)
 end
