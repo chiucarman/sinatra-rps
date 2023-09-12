@@ -9,48 +9,48 @@ get("/") do
 end
 
 get("/rock") do
-  moves = ["Rock", "Paper", "Scissors"]
+  moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
 
-  if @comp_move == "Rock"
-    @outcome = "Tied"
-  elsif @comp_move == "Paper"
-    @outcome = "Lost"
+  if @comp_move == "rock"
+    @outcome = "tied"
+  elsif @comp_move == "paper"
+    @outcome = "lost"
   else
-    @outcome = "Won"
+    @outcome = "won"
   end
 
   erb(:rock)
 end
 
 get("/paper") do
-  moves = ["Rock", "Paper", "Scissors"]
+  moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
 
-  if @comp_move == "Paper"
-    @outcome = "Tied"
-  elsif @comp_move == "Scissors"
-    @outcome = "Lost"
+  if @comp_move == "paper"
+    @outcome = "tied"
+  elsif @comp_move == "scissors"
+    @outcome = "lost"
   else
-    @outcome = "Won"
+    @outcome = "won"
   end
 
   erb(:paper)
 end
 
 get("/scissors") do
-  moves = ["Rock", "Paper", "Scissors"]
+  moves = ["rock", "paper", "scissors"]
 
   @comp_move = moves.sample
 
-  if @comp_move == "Scissors"
-    @outcome = "Tied"
-  elsif @comp_move == "Rock"
-    @outcome = "Lost"
+  if @comp_move == "scissors"
+    @outcome = "tied"
+  elsif @comp_move == "rock"
+    @outcome = "lost"
   else
-    @outcome = "Won"
+    @outcome = "won"
   end
 
   erb(:scissors)
